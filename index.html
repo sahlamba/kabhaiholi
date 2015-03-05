@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Kab Hai Holi?</title>
+        <link rel="icon" type="image/x-icon" href="icon.ico" />
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700|Shadows+Into+Light' rel='stylesheet' type='text/css'>
+        <style>
+            * {
+                border: 0;
+                padding: 0;
+                margin: 0;
+                -webkit-font-smoothing: antialiased;
+                color: #fff;
+                outline: none;
+                font-family: 'Raleway';
+            }
+            body {
+                background: #E72B48;
+                z-index: 0;
+            }
+            #happyholi {
+                position: absolute;
+                padding: 30px;
+                right: 0;
+                bottom: 0;
+                font-family: 'Shadows Into Light';
+                font-size: 60px;
+                display: none;
+            }
+            .box {
+                font-size: 24px;
+                padding: 18px 30px;
+                overflow: hidden;
+                font-weight: 600;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                text-align: center;
+                min-width: 384px;
+            }
+            #button {
+                -webkit-transition: all 150ms ease;
+                -moz-transition: all 150ms ease;
+                -o-transition: all 150ms ease;
+                transition: all 150ms ease;
+            }
+            .button {
+                background: #1AB669;
+                z-index: 2;
+                border-bottom: 3px solid #0C7441;
+                cursor: pointer;
+            }
+            .button:hover {
+                transform: translateY(3px);
+                border-bottom: 0;
+            }
+            .answer {
+                border-bottom: 0;
+                background: #FDD716;
+            }
+            .image {
+                position: absolute;
+                left: 50%;
+                top: 90px;
+                margin-left: -60px;
+                width: 120px;
+                height: 120px;
+                background: url('gabbar.jpg');
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 64px;
+                border: 3px solid #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="image">
+        </div>
+        <div id="button" class="box button">
+            Arey, Holi kab hai? Kab hai holi?
+        </div>
+        <div id="happyholi">
+            Happy Holi!
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            $('#button').css('marginLeft', '-' + $('#button').innerWidth()/2 + 'px');
+            $('#button').css('marginTop', '-' + $('#button').innerHeight()/2 + 'px');
+            $('#button').css('borderRadius', $('#button').innerHeight()/2 + 'px');
+            $('#button').click(function (e) {
+                var today = new Date();
+                var dd = today.getDate();
+                var mm = today.getMonth()+1; //January is 0!
+                var yyyy = today.getFullYear();
+                
+                if (dd == 7 && mm == 3) {
+                    var answer = 'Holi kal thi. Kal thi Holi!';
+                } else if (dd == 5 && mm == 3) {
+                    var answer = 'Holi kal hai. Kal hai Holi!';
+                } else if (dd == 6 && mm == 3) {
+                    var answer = 'Holi hai aaj. Aaj hai Holi!';
+                } else {
+                    var answer = 'March 6th';
+                }
+                
+                this.innerHTML = answer;
+                $('#button').addClass('answer');
+                $('#button').removeClass('button');
+                $('#happyholi').delay(300).fadeIn(600);
+            });
+        </script>
+    </body>
+</html>
