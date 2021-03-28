@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Kab Hai Holi?</title>
         <link rel="icon" type="image/x-icon" href="icon.ico" />
-        <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700|Shadows+Into+Light' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700|Shadows+Into+Light' rel='stylesheet' type='text/css'>
         <link href='shake.min.css' rel='stylesheet' type='text/css'>
         <style>
             * {
@@ -57,24 +57,34 @@
                 border-bottom: 0;
             }
             .answer {
+                color: #333333;
                 border-bottom: 0;
                 background: #FDD716;
             }
             .image {
                 position: absolute;
                 left: 50%;
-                top: 90px;
-                margin-left: -60px;
-                width: 120px;
-                height: 120px;
+                top: 50px;
+                margin-left: -160px;
+                width: 320px;
+                height: 320px;
                 background: url('gabbar.jpg');
                 background-position: 50% 50%;
                 background-repeat: no-repeat;
                 background-size: cover;
-                border-radius: 64px;
+                border-radius: 50%;
                 border: 3px solid #fff;
             }
         </style>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXGY4F0KZE"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-QXGY4F0KZE');
+        </script>
     </head>
     <body>
         <div class="image">
@@ -96,14 +106,14 @@
                 var mm = today.getMonth()+1; //January is 0!
                 var yyyy = today.getFullYear();
 
-                if (dd == 14 && mm == 3) {
+                if (dd == 11 && mm == 3) {
                     var answer = 'Holi kal thi. Kal thi Holi!';
-                } else if (dd == 12 && mm == 3) {
+                } else if (dd == 9 && mm == 3) {
                     var answer = 'Holi kal hai. Kal hai Holi!';
-                } else if (dd == 13 && mm == 3) {
+                } else if (dd == 10 && mm == 3) {
                     var answer = 'Holi hai aaj. Aaj hai Holi!';
                 } else {
-                    var answer = 'March 13th';
+                    var answer = 'March 10th';
                 }
 
                 this.innerHTML = answer;
