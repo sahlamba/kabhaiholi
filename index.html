@@ -106,7 +106,9 @@
                 var mm = today.getMonth()+1; //January is 0!
                 var yyyy = today.getFullYear();
                 
+                // Update these two lines every year!
                 var holiDate = 18;
+                var dateSuffix = 'th';
 
                 if (dd === holiDate + 1 && mm == 3) {
                     var answer = 'Holi kal thi. Kal thi Holi!';
@@ -115,7 +117,7 @@
                 } else if (dd === holiDate && mm == 3) {
                     var answer = 'Holi hai aaj. Aaj hai Holi!';
                 } else {
-                    var answer = 'March ' + holiDate + 'th';
+                    var answer = 'March ' + holiDate + dateSuffix;
                 }
 
                 this.innerHTML = answer;
