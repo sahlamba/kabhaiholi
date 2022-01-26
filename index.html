@@ -105,15 +105,17 @@
                 var dd = today.getDate();
                 var mm = today.getMonth()+1; //January is 0!
                 var yyyy = today.getFullYear();
+                
+                var holiDate = 18;
 
-                if (dd == 30 && mm == 3) {
+                if (dd === holiDate + 1 && mm == 3) {
                     var answer = 'Holi kal thi. Kal thi Holi!';
-                } else if (dd == 28 && mm == 3) {
+                } else if (dd === holiDate - 1 && mm == 3) {
                     var answer = 'Holi kal hai. Kal hai Holi!';
-                } else if (dd == 29 && mm == 3) {
+                } else if (dd === holiDate && mm == 3) {
                     var answer = 'Holi hai aaj. Aaj hai Holi!';
                 } else {
-                    var answer = 'March 29th';
+                    var answer = 'March ' + holiDate + 'th';
                 }
 
                 this.innerHTML = answer;
